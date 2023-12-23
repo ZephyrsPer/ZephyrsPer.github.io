@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>智慧养老-登录</title>
+    <meta name="description" content="Admin Template to use in any Backend Development">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <!-- CSS ============================================ -->
+    <!-- Vendor CSS(Contain Bootstrap,Icon Fonts) -->
+    <link rel="stylesheet" href="assets/css/vendor.min.css">
+    <!-- Plugin CSS(Global Plugins Files) -->
+    <link rel="stylesheet" href="assets/css/simplebar.css">
+    <!-- Plugin CSS(Plugins Files for only this Page) -->
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="authentication-wrapper row gx-0">
+            <!-- Login Form Start -->
+            <div class="col-lg-6 col-12 align-self-center my-10 px-3">
+                <div class="login-register-form">
+                    <div class="head">
+                        <h3 class="title"><span class="fw-700">欢迎使用智慧养老</span><br>登录界面</h3>
+                    </div>
+                    <form onsubmit="return simulateLogin()">
+                        <div class="row mb-n6">
+                            <div class="col-12 mb-6">
+                                <label class="form-label fw-600" for="username">用户名</label>
+                                <input type="text" id="username" class="form-control form-control-round" placeholder="输入用户名">
+                            </div>
+                            <div class="col-12 mb-6">
+                                <label class="form-label fw-600" for="password">密码</label>
+                                <input type="password" id="password" class="form-control form-control-round" placeholder="输入密码">
+                                <label class="form-label fw-600 mb-0 mt-2 text-end"><a href="#">忘记密码</a></label>
+                            </div>
+                            <div class="col-12 mb-6">
+                                <button type="submit" class="btn btn-primary btn-round w-100">登录</button>
+                            </div>
+                            <div class="col-12 mb-6">
+                                <a class="btn btn-primary btn-round w-100" href="register.html">注册</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div><!-- Login Form End -->
+            <!-- Login Form BG Image Start -->
+            <div class="col-lg-6 col-12 d-none d-lg-block">
+                <div class="authentication-bg-image" style="background-image: url(assets/img/login.jpg);"></div>
+            </div><!-- Login Form BG Image End -->
+        </div>
+    </div><!-- JS Files ============================================ -->
+    <!-- Global Vendor,plugins JS -->
+    <!-- Vendor JS -->
+    <script src="assets/js/vendor.min.js"></script>
+    <!--Plugins JS-->
+    <script src="assets/js/simplebar.min.js"></script><!-- Plugins & Activation JS For Only This Page -->
+    <!--Main JS(Common Activation Codes)-->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        function simulateLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // 在这里可以添加一些简单的前端验证逻辑，例如检查用户名和密码是否为空
+            // 如果验证失败，可以返回false来阻止表单提交
+
+            // 模拟登录成功，直接跳转到指定页面
+            alert('登录成功');
+            window.location.href = "admins-list.html";
+            
+            // 防止表单默认提交行为
+            return false;
+        }
+    </script>
+</body>
+
+</html>

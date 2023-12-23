@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>智慧养老-监测选择</title>
+    <meta name="description" content="Admin Template to use in any Backend Development">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><!-- Favicon -->
+    <!-- CSS ============================================ -->
+    <!-- Vendor CSS(Contain Bootstrap,Icon Fonts) -->
+    <link rel="stylesheet" href="assets/css/vendor.min.css"><!-- Plugin CSS(Global Plugins Files) -->
+    <link rel="stylesheet" href="assets/css/simplebar.css"><!-- Main Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+
+<body>
+<div class="main-wrapper">
+    <!-- Header Section Start -->
+    <div class="header-section">
+        <div class="container-fluid">
+            <div class="row justify-content-between align-items-center">
+                <!-- Header Logo(Header Left) Start -->
+                <div class="header-logo col-auto d-none d-sm-flex"><a href="index.html"><span class="logo-icon"><img
+                        src="assets/img/logo-icon.png" alt="Logo Icon"><img
+                        src="assets/img/logo-icon-light.png" class="light" alt="Logo Icon"></span><span
+                        class="logo-default"><img src="assets/img/logo.png" alt="Logo Default"><img
+                        src="assets/img/logo-default-light.png" class="light" alt="Logo Default"></span></a>
+                </div><!-- Header Logo(Header Left) End -->
+            </div>
+        </div>
+    </div><!-- Header Section End -->
+    <!-- SideNav Section Start -->
+    <div class="sidenav-section" data-simplebar="">
+        <!-- SideNav Inner Start -->
+        <div class="sidenav-inner">
+            <nav class="sidenav-menu" id="sidenav-menu">
+                <ul>
+                    <li class="has-sub-menu"><a href="#"><i class="nav-icon"></i>
+                            操作<span class="arrow"><i class="fa fa-angle-down"></i></span></a>
+                        <ul class="sub-menu">
+                            <li><a href="MonitoringOptionsTabs.html">操作的选项卡</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub-menu"><a href="#"><i data-feather="" class="nav-icon"></i>管理系统<span
+                                class="arrow"><i class="fa fa-angle-down"></i></span></a>
+                        <ul class="sub-menu">
+                            <li><a href="worker-list.html">职工表</a></li>
+                            <li><a href="oldman-list1.html">老人信息一</a></li>
+                            <li><a href="oldman-list2.html">老人信息二</a></li>
+                            <li><a href="event-list.html">事务列表</a></li>
+                            <li><a href="custodian-list.html">监护人信息</a></li>
+                            <li><a href="javascript:showdata()">管理员信息</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div><!-- SideNav Inner End -->
+    </div><!-- SideNav Section End -->
+    <!-- Content Body Start -->
+    <div class="content-body">
+        <!-- Page Headings Start -->
+        <div class="row justify-content-between align-items-center mb-4">
+            <!-- Page Heading Start -->
+            <div class="col-md-auto col-12 mb-2">
+                <h3 class="mb-0">Tabs</h3>
+            </div><!-- Page Heading End -->
+            <!-- Page Button Group Start -->
+            <!--                <div class="col-md-auto col-12 mb-2"><span>Date:17.06.2021 6.17am</span></div>-->
+            <!-- Page Button Group End -->
+        </div><!-- Page Headings End -->
+        <div class="row mb-n6">
+
+            <!--Tab With Icon Start-->
+            <div class="col-xl-12 col-12 mb-6">
+                <div class="card">
+                    <div class="card-head border-bottom">
+                        <h4 class="title">Tab With Icon</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="nav nav-tabs mb-3">
+                            <li class="nav-item" onclick="changeState1()"><a class="nav-link active" data-bs-toggle="tab" href="#choose1"><i
+                                    class="fa fa-home me-1" onclick="changeState1()"></i>One</a></li>
+                            <li class="nav-item" onclick="changeState2()"><a class="nav-link" data-bs-toggle="tab" href="#choose2"><i
+                                    class="fa fa-user me-1" onclick="changeState2()"></i>Two</a></li>
+                            <li class="nav-item"onclick="changeState3()"><a class="nav-link" data-bs-toggle="tab" href="#choose3"><i
+                                    class="fa fa-envelope me-1" onclick="changeState3()"></i>Three</a></li>
+                            <li class="nav-item"onclick="changeState4()"><a class="nav-link" data-bs-toggle="tab" href="#choose4"><i
+                                    class="fa fa-envelope me-1" onclick="changeState4()"></i>Four</a></li>
+                            <li class="nav-item"onclick="changeState5()"><a class="nav-link" data-bs-toggle="tab" href="#choose4"><i
+                                    class="fa fa-envelope me-1" onclick="changeState5()"></i>Transform</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="choose1">
+                                <p><img id="001" src="http://127.0.0.1:5001/video_viewer2" height="523.25" width="1000" /></p>
+                            </div>
+                            <div class="tab-pane fade" id="choose2">
+                                <p><img id="002" src="http://127.0.0.1:5001/video_viewer2" height="523.25" width="1000"/></p>
+                            </div>
+                            <div class="tab-pane fade" id="choose3">
+                                <p><img id="003" src="http://127.0.0.1:5001/video_viewer2" height="523.25" width="1000" /></p>
+                            </div>
+                            <div class="tab-pane fade" id="choose4">
+                                <p><img id="004" src="http://127.0.0.1:5001/video_viewer2" height="523.25" width="1000"/></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Tab With Icon End-->
+        </div>
+    </div><!-- Content Body End -->
+    <!-- Footer Section Start -->
+    <div class="footer-section bg-white py-4 mt-auto">
+        <!--            <div class="container-fluid">-->
+        <!--                <div class="footer-copyright text-center">-->
+        <!--                    <p class="text-muted">2021 &copy;By <a href="/">bootstrapmb</a></p>-->
+        <!--                </div>-->
+    </div>
+</div><!-- Footer Section End -->
+</div><!-- JS Files ============================================ -->
+<!-- Global Vendor,plugins JS -->
+<!-- Vendor JS -->
+<script src="assets/js/vendor.min.js"></script>
+<!--Plugins JS-->
+<script src="assets/js/simplebar.min.js"></script>
+<!--Main JS(Common Activation Codes)-->
+<script src="assets/js/main.js"></script>
+
+
+
+
+<script>
+    function load(){
+        var searchParams = new URLSearchParams(location.search);
+        var username=searchParams.get('username');
+        alert(username)
+    }
+    function changeState1(){
+        var request="1"
+        $.ajax({
+            url:' http://127.0.0.1:5001/state1',
+            type:'GET',
+            data:{id:request},
+        })
+    }function changeState2(){
+        var request="2"
+        $.ajax({
+            url:' http://127.0.0.1:5001/state2',
+            type:'GET',
+            data:{id:request},
+        })
+    }function changeState3(){
+        var request="3"
+        $.ajax({
+            url:' http://127.0.0.1:5001/state3',
+            type:'GET',
+            data:{id:request},
+        })
+    }
+    function changeState4(){
+        var request="4"
+        $.ajax({
+            url:' http://127.0.0.1:5001/state4',
+            type:'GET',
+            data:{id:request},
+        })
+    }
+    var judge = 1;
+    var link = "http://127.0.0.1:5001/video_viewer"
+    var link2 = "http://127.0.0.1:5001/video_viewer2"
+
+    function changeState5(){
+        var link = "http://127.0.0.1:5001/video_viewer"
+        if(judge == 1){
+            judge = 2
+            document.getElementById("001").setAttribute("src",link)
+            document.getElementById("002").setAttribute("src",link)
+            document.getElementById("003").setAttribute("src",link)
+            document.getElementById("004").setAttribute("src",link)
+        }else{
+            judge = 1
+            document.getElementById("001").setAttribute("src",link2)
+            document.getElementById("002").setAttribute("src",link2)
+            document.getElementById("003").setAttribute("src",link2)
+            document.getElementById("004").setAttribute("src",link2)
+        }
+    }
+</script>
+</body>
+
+</html>

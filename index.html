@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>养老服务首页</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+        }
+
+        nav {
+            background-color: #444;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        section {
+            padding: 40px;
+        }
+
+        #hero {
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        #hero h2 {
+            font-size: 36px;
+            color: #333;
+        }
+
+        #hero p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        #about,
+        #services,
+        #contact {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 40px;
+        }
+
+        .service {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .service img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .service h3 {
+            margin-top: 10px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>智慧养老服务</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">关于我们</a></li>
+                <li><a href="#services">服务项目</a></li>
+                <li><a href="#contact">联系我们</a></li>
+                <li><a href="./src/login.html">登录管理系统</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h2>提供关爱、尊严的养老服务</h2>
+        <p>让老年人过上幸福、健康的生活</p>
+        <a href="#services" class="cta-button">了解更多</a>
+    </section>
+
+    <section id="about">
+        <h2>关于我们</h2>
+        <p>智慧养老服务致力于为老年人提供全面、贴心的养老服务。我们关注老年人的身心健康，提供温馨的居住环境和各类关爱活动。</p>
+    </section>
+
+    <section id="services">
+        <h2>我们的服务</h2>
+        <div class="service">
+            <img src="./assets/image/service1.jpg" alt="服务1">
+            <h3>健康管理</h3>
+            <p>定期体检、健康咨询和个性化的健康管理计划。</p>
+        </div>
+        <div class="service">
+            <img src="./assets/image/service2.jpg" alt="服务2">
+            <h3>社交活动</h3>
+            <p>各种社交活动，让老年人拓展社交圈，丰富生活。</p>
+        </div>
+        <div class="service">
+            <img src="./assets/image/service3.jpg" alt="服务3">
+            <h3>居家护理</h3>
+            <p>提供居家护理服务，关怀老年人的生活需求。</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>联系我们</h2>
+        <p>有任何疑问或需要了解更多信息？请随时联系我们。</p>
+        <form action="submit_form.php" method="post">
+            <label for="name">姓名：</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">邮箱：</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">留言：</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">提交</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 智慧养老服务</p>
+    </footer>
+</body>
+
+</html>

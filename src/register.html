@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>智慧养老-注册</title>
+    <meta name="description" content="Admin Template to use in any Backend Development">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <!-- CSS ============================================ -->
+    <!-- Vendor CSS(Contain Bootstrap,Icon Fonts) -->
+    <link rel="stylesheet" href="assets/css/vendor.min.css">
+    <!-- Plugin CSS(Global Plugins Files) -->
+    <link rel="stylesheet" href="assets/css/simplebar.css">
+    <!-- Plugin CSS(Plugins Files for only this Page) -->
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="authentication-wrapper row gx-0">
+            <!-- Login Form Start -->
+            <div class="col-lg-6 col-12 align-self-center my-10 px-3">
+                <div class="login-rtegister-form">
+                    <div class="head">
+                        <h3 class="title"><span class="fw-700">欢迎使用智慧养老</span><br>创建你的账户</h3>
+                    </div>
+                    <form action="#">
+                        <div class="row mb-n6">
+                            <div class="col-12 mb-6">
+                                <label class="form-label fw-600" for="username">用户名</label>
+                                <input type="text" id="username" class="form-control form-control-round"
+                                    placeholder="Enter username">
+                            </div>
+                            <div class="col-12 mb-6">
+                                <label class="form-label fw-600" for="password">密码</label>
+                                <input type="text" id="password" class="form-control form-control-round"
+                                    placeholder="Enter password">
+                            </div>
+                            <div class="col-12 mb-6">
+                                <label class="form-label fw-600" for="password">姓名</label>
+                                <input type="text" id="T-name" class="form-control form-control-round" placeholder="">
+                            </div>
+                            <div class="col-12 mb-6">
+                                <label class="form-label fw-600" for="password">身份证号</label>
+                                <input type="text" id="ID" class="form-control form-control-round" placeholder="Enter ID">
+                            </div>
+                            <div class="col-12 mb-6">
+                                <label class="form-label fw-600" for="password">授权人账号</label>
+                                <input type="text" id="password2" class="form-control form-control-round"
+                                    placeholder="Enter A-username">
+                            </div>
+                            <div class="col-12 mb-6">
+                                <label class="form-label fw-600" for="password">授权人密码</label>
+                                <input type="text" id="username2" class="form-control form-control-round"
+                                    placeholder="Enter password">
+                                <label class="form-label fw-600 mb-0 mt-2 text-end"><a href="login.html">返回登录</a></label>
+                            </div>
+                            <div class="col-12 mb-6">
+                                <button class="btn btn-primary btn-round w-100" onclick="register()">注册</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Login Form End -->
+            <!-- Login Form BG Image Start -->
+            <div class="col-lg-6 col-12 d-none d-lg-block">
+                <div class="authentication-bg-image" style="background-image: url(assets/img/register.jpg);"></div>
+            </div>
+            <!-- Login Form BG Image End -->
+        </div>
+    </div>
+    <!-- JS Files ============================================ -->
+    <!-- Global Vendor,plugins JS -->
+    <!-- Vendor JS -->
+    <script src="assets/js/vendor.min.js"></script>
+    <!--Plugins JS-->
+    <script src="assets/js/simplebar.min.js"></script>
+    <!-- Plugins & Activation JS For Only This Page -->
+    <!--Main JS(Common Activation Codes)-->
+    <script src="assets/js/main.js"></script>
+    <script>
+        function register() {
+            // 获取表单中的值
+            var id = document.getElementById("ID").value;
+            var name = document.getElementById("T-name").value;
+            var uid = document.getElementById("username").value;
+            var pw = document.getElementById("password").value;
+            var aid = document.getElementById("username2").value;
+            var apw = document.getElementById("password2").value;
+
+            // 在这里可以添加前端验证逻辑
+
+            // 直接提示注册成功
+            alert('注册成功，请返回登录界面');
+        }
+    </script>
+</body>
+
+</html>

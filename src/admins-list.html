@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Adtron - Responsive Bootstrap 5 Admin Template</title>
+    <meta name="description" content="Admin Template to use in any Backend Development">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><!-- Favicon -->
+
+    <!-- CSS ============================================ -->
+    <!-- Vendor CSS(Contain Bootstrap,Icon Fonts) -->
+    <link rel="stylesheet" href="assets/css/vendor.min.css"><!-- Plugin CSS(Global Plugins Files) -->
+    <link rel="stylesheet" href="assets/css/simplebar.css"><!-- Plugin CSS(Plugins Files for only this Page) -->
+    <!--    <link rel="stylesheet" href="assets/css/plugins/jqvmap.css">-->
+    <link rel="stylesheet" href="assets/css/datatables.min.css"><!-- Main Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <!-- Header Section Start -->
+        <div class="header-section">
+            <div class="container-fluid">
+                <div class="row justify-content-between align-items-center">
+                    <!-- Header Logo(Header Left) Start -->
+                    <div class="header-logo col-auto d-none d-sm-flex"><a href="index.html"><span class="logo-icon"><img
+                                    src="assets/img/logo-icon.png" alt="Logo Icon"><img
+                                    src="assets/img/logo-icon-light.png" class="light" alt="Logo Icon"></span><span
+                                class="logo-default"><img src="assets/img/logo.png" alt="Logo Default"><img
+                                    src="assets/img/logo-default-light.png" class="light" alt="Logo Default"></span></a>
+                    </div><!-- Header Logo(Header Left) End -->
+                    <!-- Header Right Start -->
+                    <div class="header-right flex-grow-1 col-auto">
+                        <div class="row justify-content-between align-items-center">
+                            <!-- SideNav Toggle & Search Start -->
+                            <div class="d-flex col-auto">
+                                <!-- SideNav Toggle Start --><button class="sidenav-toggle d-lg-none"><i
+                                        data-feather="menu"></i></button><!-- SideNav Toggle End -->
+                                <!-- Search Start -->
+                                <div class="header-search"><button class="header-search-toggle d-flex d-md-none"><i
+                                            data-feather="search"></i></button>
+                                    <div class="header-search-form">
+                                        <form><input type="text" oninput="search()" id="searchv"
+                                                placeholder="Search Something..."><button class="search-submit"><i
+                                                    data-feather="search"></i></button></form>
+                                        <!--                                                <p id="demo">s</p>-->
+                                    </div>
+                                </div>
+                                <!-- Search End -->
+                            </div><!-- SideNav Toggle & Search End -->
+                            <!-- Header Actions(Header Right) Start -->
+                            <div class="col-auto">
+                                <ul class="header-right-action nav">
+                                    <!-- Notification Start -->
+                                    <!-- Notification End -->
+                                </ul>
+                            </div><!-- Header Actions(Header Right) End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Header Section End -->
+        <!-- SideNav Section Start -->
+        <div class="sidenav-section" data-simplebar="">
+            <!-- SideNav Inner Start -->
+            <div class="sidenav-inner">
+                <nav class="sidenav-menu" id="sidenav-menu">
+                    <ul>
+                        <li class="has-sub-menu"><a href="#"><i class="nav-icon"></i>
+                                操作<span class="arrow"><i class="fa fa-angle-down"></i></span></a>
+                            <ul class="sub-menu">
+                                <li><a href="MonitoringOptionsTabs.html">操作的选项卡</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-sub-menu"><a href="#"><i data-feather="" class="nav-icon"></i>管理系统<span
+                                    class="arrow"><i class="fa fa-angle-down"></i></span></a>
+                            <ul class="sub-menu">
+                                <li><a href="worker-list.html">职工表</a></li>
+                                <li><a href="oldman-list1.html">老人信息一</a></li>
+                                <li><a href="oldman-list2.html">老人信息二</a></li>
+                                <li><a href="event-list.html">事务列表</a></li>
+                                <li><a href="custodian-list.html">监护人信息</a></li>
+                                <li><a href="javascript:showdata()">管理员信息</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div><!-- SideNav Inner End -->
+        </div><!-- SideNav Section End -->
+        <!-- Content Body Start -->
+        <div class="content-body">
+            <!-- Page Headings Start -->
+            <div class="row justify-content-between align-items-center mb-4">
+                <!-- Page Heading Start -->
+                <div class="col-md-auto col-12 mb-2">
+                    <h3 class="mb-0">Admin List</h3>
+                </div><!-- Page Heading End -->
+                <!-- Page Button Group Start -->
+                <!--                <div class="col-md-auto col-12 mb-2"><span>Date:17.06.2021 6.17am</span></div>-->
+                <!-- Page Button Group End -->
+            </div><!-- Page Headings End -->
+            <!-- Products Start -->
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body p-0">
+                            <table class="product-list-table data-table datatable-selectable table" id="workertable">
+                                <thead>
+                                    <tr>
+                                        <th><label><input type="checkbox"
+                                                    class="dtrAllSelect dtr-select"><span></span></label></th>
+                                        <th>ID</th>
+                                        <th>name</th>
+                                        <th>gender</th>
+                                        <th>tel</th>
+                                        <th>userID</th>
+                                        <th>Password</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><label><input type="checkbox" class="dtr-select"><span></span></label></td>
+                                        <td><a href="#" class="product" id="ID1"><span></span></a></td>
+                                        <td><span id="name1"></span></td>
+                                        <td><span id="gender1"></span></td>
+                                        <td><span id="tel1"></span></td>
+                                        <td><span id="userID1"></span></td>
+                                        <td><span id="password1"></span></td>
+                                        <td>
+                                            <div class="product-action"><button class="btn edit"
+                                                    onclick="editinfo(1)"><i class="fa fa-pencil"></i></button><button
+                                                    class="btn delete" onclick="deleteinfo(1)"><i
+                                                        class="fa fa-trash"></i></button></div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tbody>
+                                    <tr>
+                                        <td><label><input type="checkbox" class="dtr-select"><span></span></label></td>
+                                        <td><a href="#" class="product" id="ID2"><span></span></a></td>
+                                        <td><span id="name2"></span></td>
+                                        <td><span id="gender2"></span></td>
+                                        <td><span id="tel2"></span></td>
+                                        <td><span id="userID2"></span></td>
+                                        <td><span id="password2"></span></td>
+                                        <td>
+                                            <div class="product-action"><button class="btn edit"
+                                                    onclick="editinfo(2)"><i class="fa fa-pencil"></i></button><button
+                                                    class="btn delete" onclick="deleteinfo(2)"><i
+                                                        class="fa fa-trash"></i></button></div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tbody>
+                                    <tr>
+                                        <td><label><input type="checkbox" class="dtr-select"><span></span></label></td>
+                                        <td><a href="#" class="product" id="ID3"><span></span></a></td>
+                                        <td><span id="name3"></span></td>
+                                        <td><span id="gender3"></span></td>
+                                        <td><span id="tel3"></span></td>
+                                        <td><span id="userID3"></span></td>
+                                        <td><span id="password3"></span></td>
+                                        <td>
+                                            <div class="product-action"><button class="btn edit"
+                                                    onclick="editinfo(3)"><i class="fa fa-pencil"></i></button><button
+                                                    class="btn delete" onclick="deleteinfo(3)"><i
+                                                        class="fa fa-trash"></i></button></div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tbody>
+                                    <tr>
+                                        <td><label><input type="checkbox" class="dtr-select"><span></span></label></td>
+                                        <td><a href="#" class="product" id="ID4"><span></span></a></td>
+                                        <td><span id="name4"></span></td>
+                                        <td><span id="gender4"></span></td>
+                                        <td><span id="tel4"></span></td>
+                                        <td><span id="userID4"></span></td>
+                                        <td><span id="password4"></span></td>
+                                        <td>
+                                            <div class="product-action"><button class="btn edit"
+                                                    onclick="editinfo(4)"><i class="fa fa-pencil"></i></button><button
+                                                    class="btn delete" onclick="deleteinfo(4)"><i
+                                                        class="fa fa-trash"></i></button></div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tbody>
+                                    <tr>
+                                        <td><label><input type="checkbox" class="dtr-select"><span></span></label></td>
+                                        <td><a href="#" class="product" id="ID5"><span></span></a></td>
+                                        <td><span id="name5"></span></td>
+                                        <td><span id="gender5"></span></td>
+                                        <td><span id="tel5"></span></td>
+                                        <td><span id="userID5"></span></td>
+                                        <td><span id="password5"></span></td>
+                                        <td>
+                                            <div class="product-action"><button class="btn edit"
+                                                    onclick="editinfo(5)"><i class="fa fa-pencil"></i></button><button
+                                                    class="btn delete" onclick="deleteinfo(5)"><i
+                                                        class="fa fa-trash"></i></button></div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tbody>
+                                    <tr>
+                                        <td><label><input type="checkbox" class="dtr-select"><span></span></label></td>
+                                        <td><a href="#" class="product" id="ID6"><span></span></a></td>
+                                        <td><span id="name6"></span></td>
+                                        <td><span id="gender6"></span></td>
+                                        <td><span id="tel6"></span></td>
+                                        <td><span id="userID6"></span></td>
+                                        <td><span id="password6"></span></td>
+                                        <td>
+                                            <div class="product-action"><button class="btn edit"
+                                                    onclick="editinfo(6)"><i class="fa fa-pencil"></i></button><button
+                                                    class="btn delete" onclick="deleteinfo(6)"><i
+                                                        class="fa fa-trash"></i></button></div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tbody>
+                                    <tr>
+                                        <td><label><input type="checkbox" class="dtr-select"><span></span></label></td>
+                                        <td><a href="#" class="product" id="ID7"><span></span></a></td>
+                                        <td><span id="name7"></span></td>
+                                        <td><span id="gender7"></span></td>
+                                        <td><span id="tel7"></span></td>
+                                        <td><span id="userID7"></span></td>
+                                        <td><span id="password7"></span></td>
+                                        <td>
+                                            <div class="product-action"><button class="btn edit"
+                                                    onclick="editinfo(7)"><i class="fa fa-pencil"></i></button><button
+                                                    class="btn delete" onclick="deleteinfo(7)"><i
+                                                        class="fa fa-trash"></i></button></div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tbody>
+                                    <tr>
+                                        <td><label><input type="checkbox" class="dtr-select"><span></span></label></td>
+                                        <td><a href="#" class="product" id="ID8"><span></span></a></td>
+                                        <td><span id="name8"></span></td>
+                                        <td><span id="gender8"></span></td>
+                                        <td><span id="tel8"></span></td>
+                                        <td><span id="userID8"></span></td>
+                                        <td><span id="password8"></span></td>
+                                        <td>
+                                            <div class="product-action"><button class="btn edit"
+                                                    onclick="editinfo(8)"><i class="fa fa-pencil"></i></button><button
+                                                    class="btn delete" onclick="deleteinfo(8)"><i
+                                                        class="fa fa-trash"></i></button></div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tbody>
+                                    <tr>
+                                        <td><label><input type="checkbox" class="dtr-select"><span></span></label></td>
+                                        <td><a href="#" class="product" id="ID9"><span></span></a></td>
+                                        <td><span id="name9"></span></td>
+                                        <td><span id="gender9"></span></td>
+                                        <td><span id="tel9"></span></td>
+                                        <td><span id="userID9"></span></td>
+                                        <td><span id="password9"></span></td>
+                                        <td>
+                                            <div class="product-action"><button class="btn edit"
+                                                    onclick="editinfo(9)"><i class="fa fa-pencil"></i></button><button
+                                                    class="btn delete" onclick="deleteinfo(9)"><i
+                                                        class="fa fa-trash"></i></button></div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tbody>
+                                    <tr>
+                                        <td><label><input type="checkbox" class="dtr-select"><span></span></label></td>
+                                        <td><a href="#" class="product" id="ID10"><span></span></a></td>
+                                        <td><span id="name10"></span></td>
+                                        <td><span id="gender10"></span></td>
+                                        <td><span id="tel10"></span></td>
+                                        <td><span id="userID10"></span></td>
+                                        <td><span id="password10"></span></td>
+                                        <td>
+                                            <div class="product-action"><button class="btn edit"
+                                                    onclick="editinfo(10)"><i class="fa fa-pencil"></i></button><button
+                                                    class="btn delete" onclick="deleteinfo(10)"><i
+                                                        class="fa fa-trash"></i></button></div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Products End -->
+        </div><!-- Content Body End -->
+        <!-- Footer Section Start -->
+        <!--        <div class="footer-section bg-white py-4 mt-auto">-->
+        <!--            <div class="container-fluid">-->
+        <!--                <div class="footer-copyright text-center">-->
+        <!--                    <p class="text-muted">2021 &copy;By <a href="/">bootstrapmb</a></p>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>&lt;!&ndash; Footer Section End &ndash;&gt;-->
+    </div><!-- JS Files ============================================ -->
+    <!-- Global Vendor,plugins JS -->
+    <!-- Vendor JS -->
+    <script src="assets/js/vendor.min.js"></script>
+    <!--Plugins JS-->
+    <script src="assets/js/simplebar.min.js"></script><!-- Plugins & Activation JS For Only This Page -->
+    <script src="assets/js/datatables.min.js"></script>
+    <!--    <script>-->
+    <!--        $(function(){-->
+    <!--            $('#workertable').bootstrapTable({-->
+    <!--                editable:true,-->
+    <!--                showRefresh: true,-->
+    <!--                    columns:[{field:'ID',title:'ID'},{field:'name',title:'name'},-->
+    <!--                        {field:'gender',title:'gender'},{field:'tel',title:'tel'},-->
+    <!--                        {field:'type',title:'type'},{field:'password',title:'password'}]-->
+    <!--            });-->
+    <!--        })-->
+    <!--    </script>-->
+    <!--    <script>-->
+    <!--        function newtable(){-->
+    <!--            document.getElementById("ID").innerText ='651551';-->
+    <!--            var newData = {ID:'654321', name:'adv',gender:'f',tel:'15151311221',type:'v',password:'F'};-->
+    <!--            $("#workertable").bootstrapTable('append',newData);-->
+    <!--        }-->
+    <!--    </script>-->
+    <script>
+        var state = 0
+        function editinfo(a) {
+            var request = "editadminsinfo"
+            var request2 = "addadminsinfo"
+            if (document.getElementById("tel" + a).contentEditable == 'true') {
+                document.getElementById("ID" + a).contentEditable = 'false'
+                document.getElementById("name" + a).contentEditable = 'false'
+                document.getElementById("gender" + a).contentEditable = 'false'
+                document.getElementById("tel" + a).contentEditable = 'false'
+                document.getElementById("userID" + a).contentEditable = 'false'
+                document.getElementById("password" + a).contentEditable = 'false'
+                if (state == 1) {
+                    $.ajax({
+                        url: ' http://127.0.0.1:5001//updateAdmin',
+                        type: 'GET',
+                        data: {
+                            reeditadmins: request,
+                            ID: document.getElementById("ID" + a).innerText,
+                            // name:document.getElementById("name"+a).innerText,
+                            // gender:document.getElementById("gender"+a).innerText,
+                            tel: document.getElementById("tel" + a).innerText,
+                            // userID:document.getElementById("userID"+a).innerText,
+                            password: document.getElementById("password" + a).innerText
+                        },
+                    })
+                    alert('edit success')
+                } else {
+                    $.ajax({
+                        url: ' http://127.0.0.1:5001//insertAdmin',
+                        type: 'GET',
+                        data: {
+                            readdadmins: request2,
+                            ID: document.getElementById("ID" + a).innerText,
+                            name: document.getElementById("name" + a).innerText,
+                            gender: document.getElementById("gender" + a).innerText,
+                            tel: document.getElementById("tel" + a).innerText,
+                            userID: document.getElementById("userID" + a).innerText,
+                            password: document.getElementById("password" + a).innerText
+                        },
+                    })
+                    alert('add success')
+                }
+
+            } else {
+                if (document.getElementById("tel" + a).innerText == '') {
+                    alert('add info')
+                    state = 2
+                    document.getElementById("ID" + a).innerText = 'example:132'
+                    document.getElementById("name" + a).innerText = 'example:cuisicong'
+                    document.getElementById("gender" + a).innerText = 'example:m/f'
+                    document.getElementById("tel" + a).innerText = 'example:131256847752'
+                    document.getElementById("userID" + a).innerText = 'example:165'
+                    document.getElementById("password" + a).innerText = 'example:123456'
+                    document.getElementById("ID" + a).contentEditable = 'true'
+                    document.getElementById("name" + a).contentEditable = 'true'
+                    document.getElementById("gender" + a).contentEditable = 'true'
+                    document.getElementById("tel" + a).contentEditable = 'true'
+                    document.getElementById("userID" + a).contentEditable = 'true'
+                    document.getElementById("password" + a).contentEditable = 'true'
+                } else {
+                    alert('editable now')
+                    state = 1
+                    // document.getElementById("ID"+a).contentEditable='true'
+                    // document.getElementById("name"+a).contentEditable='true'
+                    // document.getElementById("gender"+a).contentEditable='true'
+                    document.getElementById("tel" + a).contentEditable = 'true'
+                    document.getElementById("userID" + a).contentEditable = 'true'
+                    document.getElementById("password" + a).contentEditable = 'true'
+                }
+            }
+        }
+        function deleteinfo(a) {
+            var request = "dewadmins"
+            $.ajax({
+                url: ' http://127.0.0.1:5001//deleteAdmin',
+                type: 'GET',
+                data: {
+                    redeadmins: request,
+                    ID: document.getElementById("ID" + a).innerText
+                }
+            })
+            for (var number = a; number < 10; number++) {
+                var num = number + 1
+                document.getElementById("ID" + number).innerText = document.getElementById("ID" + num).innerText
+                document.getElementById("name" + number).innerText = document.getElementById("name" + num).innerText
+                document.getElementById("gender" + number).innerText = document.getElementById("gender" + num).innerText
+                document.getElementById("tel" + number).innerText = document.getElementById("tel" + num).innerText
+                document.getElementById("userID" + number).innerText = document.getElementById("userID" + num).innerText
+                document.getElementById("password" + number).innerText = document.getElementById("password" + num).innerText
+            }
+            alert('delete success')
+        }
+    </script>
+    <script>
+        window.onload = function () {
+            showdata()
+        }
+
+        function showdata() {
+            var request = "adminsinfo"
+            $.ajax({
+                url: ' http://127.0.0.1:5001//showAllAdmin',
+                type: 'GET',
+                // data:{reshowadmins:request},
+
+                success: function (result) {
+                    for (var num = 0; num < result[0].num; num++) {
+                        var number = num + 1
+                        document.getElementById("ID" + number).innerText = result[num].ID
+                        document.getElementById("name" + number).innerText = result[num].name
+                        document.getElementById("gender" + number).innerText = result[num].gender
+                        document.getElementById("tel" + number).innerText = result[num].tel
+                        document.getElementById("userID" + number).innerText = result[num].userID
+                        document.getElementById("password" + number).innerText = result[num].password
+                    }
+                }
+            })
+        }
+    </script>
+    <script>
+        function search() {
+            var x = document.getElementById("searchv").value;
+            for (var a = 1; document.getElementById("ID" + a).innerText != ''; a++) {
+                document.getElementById("ID" + a).style.color = "Black"
+                document.getElementById("name" + a).style.color = "Black"
+                document.getElementById("gender" + a).style.color = "Black"
+                document.getElementById("tel" + a).style.color = "Black"
+                document.getElementById("userID" + a).style.color = "Black"
+                document.getElementById("password" + a).style.color = "Black"
+            }
+            for (var a = 1; document.getElementById("ID" + a).innerText != ''; a++) {
+                if (document.getElementById("ID" + a).innerText === x) {
+                    document.getElementById("ID" + a).style.color = "Red"
+                } else if (document.getElementById("name" + a).innerText === x) {
+                    document.getElementById("name" + a).style.color = "Red"
+                } else if (document.getElementById("gender" + a).innerText === x) {
+                    document.getElementById("gender" + a).style.color = "Red"
+                } else if (document.getElementById("tel" + a).innerText === x) {
+                    document.getElementById("tel" + a).style.color = "Red"
+                } else if (document.getElementById("userID" + a).innerText === x) {
+                    document.getElementById("userID" + a).style.color = "Red"
+                } else if (document.getElementById("password" + a).innerText === x) {
+                    document.getElementById("password" + a).style.color = "Red"
+                } else { }
+            }
+        }
+    </script>
+    <script>
+        $('.datatable-selectable').each(function () {
+            var $this = $(this),
+                $dtrAllSelect = $this.find('thead .dtrAllSelect'),
+                $dtrSelect = $this.find('tbody .dtr-select:not(:disabled)');
+            // $this.DataTable({
+            //     responsive: true,
+            //     dom: '<"datatable-topbar"<"datatable-title">f>t<"datatable-footer"ip>',
+            //     columnDefs: [{
+            //         targets: 0,
+            //         orderable: false
+            //     }],
+            //     language: {
+            //         paginate: {
+            //             previous: '<i class="fa fa-angle-left"></i>',
+            //             next: '<i class="fa fa-angle-right"></i>',
+            //         }
+            //     }
+            // });
+            $this.closest('.dataTables_wrapper').find('.datatable-title').html('worker');
+            // $dtrAllSelect.on('click', function () {
+            //     if (this.checked) {
+            //         $dtrSelect.prop('checked', this.checked).parent().addClass('selected')
+            //     } else {
+            //         $dtrSelect.prop('checked', this.checked).parent().removeClass('selected')
+            //     }
+            // });
+            // $dtrSelect.on('change', function () {
+            //     var $this = $(this);
+            //     if ($this.is(":checked")) {
+            //         $this.parent().addClass('selected')
+            //     } else {
+            //         $this.parent().removeClass('selected')
+            //     };
+            //     var check = ($dtrSelect.filter(":checked").length === $dtrSelect.length);
+            //     $dtrAllSelect.prop("checked", check)
+            // })
+        });
+    </script>
+    <!--Main JS(Common Activation Codes)-->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

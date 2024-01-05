@@ -1,0 +1,1 @@
+import{_ as o,b as t,c,e as r,g as s}from"./index--E466R47.js";const n={},_={class:"box-special"};function a(i,l){const e=t("router-view");return c(),r("div",_,[s(e)])}const d=o(n,[["render",a]]);export{d as default};

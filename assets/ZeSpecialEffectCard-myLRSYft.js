@@ -1,0 +1,1 @@
+import{_ as s,c as t,e as o,p as a,i as d,f as c}from"./index-HH4mXSUO.js";const _={},n=e=>(a("data-v-e01e2de1"),e=e(),d(),e),r={class:"card"},p=n(()=>c("div",{class:"card-content"},[c("h2",null,"卡片标题"),c("p",null,"这里是卡片的详细内容。")],-1)),i=[p];function l(e,f){return t(),o("div",r,i)}const u=s(_,[["render",l],["__scopeId","data-v-e01e2de1"]]);export{u as default};

@@ -1,0 +1,1 @@
+import{_ as o,b as c,c as t,e as s,g as r}from"./index-HH4mXSUO.js";const n={},a={class:"box-special"};function _(i,l){const e=c("router-view");return t(),s("div",a,[r(e)])}const d=o(n,[["render",_]]);export{d as default};
